@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SDKInAppMessaging_Example' do
+  pod 'SDKInAppMessaging', :path => '../'
+
+  target 'SDKInAppMessaging_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

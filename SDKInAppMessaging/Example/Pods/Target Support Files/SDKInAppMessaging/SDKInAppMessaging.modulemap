@@ -1,0 +1,6 @@
+framework module SDKInAppMessaging {
+  umbrella header "SDKInAppMessaging-umbrella.h"
+
+  export *
+  module * { export * }
+}
