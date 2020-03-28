@@ -15,6 +15,8 @@
 		878EF1EC36D925657C9156E943368381 /* Pods-SDKInAppMessaging_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 907EF6FD7255EAF99803A2B8752F5150 /* Pods-SDKInAppMessaging_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A5E93717DED3556B47F6B0F1DC68C33 /* SDKInAppMessaging-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 749BA476D996EFC56C34C2C1898EDB11 /* SDKInAppMessaging-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B19A3E3270F53886D610A28E5D3821FA /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D956FC50C580B28521A0748DA93C0A1 /* ReplaceMe.swift */; };
+		B6C28DD1242FF0F00002133E /* SharedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C28DD0242FF0F00002133E /* SharedManager.swift */; };
+		B6C28DD3242FF1030002133E /* TestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C28DD2242FF1030002133E /* TestManager.swift */; };
 		D0E30E2F2AFDBBDCC25CEBFA7DD8C223 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		F40E3E3F3FC1E271FC427C9C1B41BA91 /* Pods-SDKInAppMessaging_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 637A469E44157B41445FD0A22C4EB7CC /* Pods-SDKInAppMessaging_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -38,12 +40,12 @@
 
 /* Begin PBXFileReference section */
 		0AC3C23C72FFFF8EC02F9DB73546A1CF /* Pods-SDKInAppMessaging_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SDKInAppMessaging_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		11D950DE62F0397B23A2689B562823BE /* Pods_SDKInAppMessaging_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SDKInAppMessaging_Example.framework; path = "Pods-SDKInAppMessaging_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11D950DE62F0397B23A2689B562823BE /* Pods_SDKInAppMessaging_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKInAppMessaging_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AF5EAF61B2819B9A233369E382DD1EC /* SDKInAppMessaging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDKInAppMessaging.debug.xcconfig; sourceTree = "<group>"; };
 		20AA821F13B397A8D3E428A9F8F20BB9 /* Pods-SDKInAppMessaging_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SDKInAppMessaging_Example.release.xcconfig"; sourceTree = "<group>"; };
-		22E655A1E5613EE8FBA20D6E81262819 /* Pods_SDKInAppMessaging_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SDKInAppMessaging_Tests.framework; path = "Pods-SDKInAppMessaging_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22E655A1E5613EE8FBA20D6E81262819 /* Pods_SDKInAppMessaging_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDKInAppMessaging_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		36A57219619018BF529285701A61846F /* SDKInAppMessaging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SDKInAppMessaging.framework; path = SDKInAppMessaging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36A57219619018BF529285701A61846F /* SDKInAppMessaging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDKInAppMessaging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FBF13F88AD8CA1D2DF3F3963D18C85A /* Pods-SDKInAppMessaging_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SDKInAppMessaging_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		46EFF683C6AD548ACF0160C920FA754B /* Pods-SDKInAppMessaging_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SDKInAppMessaging_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		528EFCB2290A52F039FD41F22DB9FA4D /* Pods-SDKInAppMessaging_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SDKInAppMessaging_Tests-Info.plist"; sourceTree = "<group>"; };
@@ -52,19 +54,21 @@
 		749BA476D996EFC56C34C2C1898EDB11 /* SDKInAppMessaging-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDKInAppMessaging-umbrella.h"; sourceTree = "<group>"; };
 		7B8447898D55D4F97E78C499F5F49FA6 /* Pods-SDKInAppMessaging_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SDKInAppMessaging_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7D956FC50C580B28521A0748DA93C0A1 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = SDKInAppMessaging/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
-		80F15516C0101C80567178F0FADC6616 /* SDKInAppMessaging.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SDKInAppMessaging.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		80F15516C0101C80567178F0FADC6616 /* SDKInAppMessaging.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SDKInAppMessaging.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		84A453A870690E6BF9AA7E99B0BEC711 /* SDKInAppMessaging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDKInAppMessaging.release.xcconfig; sourceTree = "<group>"; };
 		8B1B468A800D0587134E0C4DBFA6D040 /* SDKInAppMessaging-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SDKInAppMessaging-Info.plist"; sourceTree = "<group>"; };
 		907EF6FD7255EAF99803A2B8752F5150 /* Pods-SDKInAppMessaging_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SDKInAppMessaging_Example-umbrella.h"; sourceTree = "<group>"; };
 		9CDD118A22FDE496EE97443815751462 /* SDKInAppMessaging-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDKInAppMessaging-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B4C9A4660DE6CF969AE10DCE0C69D5A3 /* SDKInAppMessaging-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDKInAppMessaging-prefix.pch"; sourceTree = "<group>"; };
+		B6C28DD0242FF0F00002133E /* SharedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedManager.swift; sourceTree = "<group>"; };
+		B6C28DD2242FF1030002133E /* TestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestManager.swift; sourceTree = "<group>"; };
 		BA577132FA7E899D0EFDE1D2D0220DF1 /* Pods-SDKInAppMessaging_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SDKInAppMessaging_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BDB7BC6531F22B635345F9479B8FCE12 /* Pods-SDKInAppMessaging_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SDKInAppMessaging_Tests.modulemap"; sourceTree = "<group>"; };
-		C041FFCA563DA993E38B9A4FC806C1FD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C041FFCA563DA993E38B9A4FC806C1FD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C6A2C0A097587CFCAF45926EED582B7B /* Pods-SDKInAppMessaging_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SDKInAppMessaging_Example-dummy.m"; sourceTree = "<group>"; };
 		C9B8E5FE43BA902F867CDA7E194416CF /* SDKInAppMessaging.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SDKInAppMessaging.modulemap; sourceTree = "<group>"; };
-		CF676DCB9160CB5746E4C431B532895A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		CF676DCB9160CB5746E4C431B532895A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CFD6D943EF015B5721712CF413477F64 /* Pods-SDKInAppMessaging_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SDKInAppMessaging_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D20381EA9CB04CDC9193ECBD6CB34783 /* Pods-SDKInAppMessaging_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SDKInAppMessaging_Example-frameworks.sh"; sourceTree = "<group>"; };
 		DD41887897A2E9F6C828A43D60B82F1E /* Pods-SDKInAppMessaging_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SDKInAppMessaging_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -143,9 +147,11 @@
 		6CFEF47586DA4EEC89BF43879F6ACDCE /* SDKInAppMessaging */ = {
 			isa = PBXGroup;
 			children = (
+				B6C28DCF242FF0D90002133E /* Classes */,
 				7D956FC50C580B28521A0748DA93C0A1 /* ReplaceMe.swift */,
 				FACCF48C55DB70B6E5D1676C83691443 /* Pod */,
 				4CA24FBD3F010FC844D8E305925E7D42 /* Support Files */,
+				B6C28DD2242FF1030002133E /* TestManager.swift */,
 			);
 			name = SDKInAppMessaging;
 			path = ../..;
@@ -184,6 +190,14 @@
 				36A57219619018BF529285701A61846F /* SDKInAppMessaging.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B6C28DCF242FF0D90002133E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B6C28DD0242FF0F00002133E /* SharedManager.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -367,8 +381,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C28DD1242FF0F00002133E /* SharedManager.swift in Sources */,
 				B19A3E3270F53886D610A28E5D3821FA /* ReplaceMe.swift in Sources */,
 				63363569C44C95CBF761CF289C43DA0D /* SDKInAppMessaging-dummy.m in Sources */,
+				B6C28DD3242FF1030002133E /* TestManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,8 +605,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

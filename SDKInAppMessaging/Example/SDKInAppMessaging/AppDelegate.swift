@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SDKInAppMessaging
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
