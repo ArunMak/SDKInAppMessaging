@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SDKInAppMessaging: bb2beceb03471e98a0ccc3f90eca17e56f31bb7a
+  SDKInAppMessaging: 881ccb33d8cee043579242a68d3589b52d9fec6f
 
 PODFILE CHECKSUM: 965118d9bdd5fc8791f3a1f717d26a5a2624853f
 

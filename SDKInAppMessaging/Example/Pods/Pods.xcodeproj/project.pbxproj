@@ -15,8 +15,7 @@
 		878EF1EC36D925657C9156E943368381 /* Pods-SDKInAppMessaging_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 907EF6FD7255EAF99803A2B8752F5150 /* Pods-SDKInAppMessaging_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A5E93717DED3556B47F6B0F1DC68C33 /* SDKInAppMessaging-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 749BA476D996EFC56C34C2C1898EDB11 /* SDKInAppMessaging-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B19A3E3270F53886D610A28E5D3821FA /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D956FC50C580B28521A0748DA93C0A1 /* ReplaceMe.swift */; };
-		B6C28DD1242FF0F00002133E /* SharedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C28DD0242FF0F00002133E /* SharedManager.swift */; };
-		B6C28DD3242FF1030002133E /* TestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C28DD2242FF1030002133E /* TestManager.swift */; };
+		B6C28DD6242FF39D0002133E /* PodManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C28DD5242FF39D0002133E /* PodManager.swift */; };
 		D0E30E2F2AFDBBDCC25CEBFA7DD8C223 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		F40E3E3F3FC1E271FC427C9C1B41BA91 /* Pods-SDKInAppMessaging_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 637A469E44157B41445FD0A22C4EB7CC /* Pods-SDKInAppMessaging_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -61,8 +60,7 @@
 		9CDD118A22FDE496EE97443815751462 /* SDKInAppMessaging-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SDKInAppMessaging-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B4C9A4660DE6CF969AE10DCE0C69D5A3 /* SDKInAppMessaging-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDKInAppMessaging-prefix.pch"; sourceTree = "<group>"; };
-		B6C28DD0242FF0F00002133E /* SharedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedManager.swift; sourceTree = "<group>"; };
-		B6C28DD2242FF1030002133E /* TestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestManager.swift; sourceTree = "<group>"; };
+		B6C28DD5242FF39D0002133E /* PodManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodManager.swift; sourceTree = "<group>"; };
 		BA577132FA7E899D0EFDE1D2D0220DF1 /* Pods-SDKInAppMessaging_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SDKInAppMessaging_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BDB7BC6531F22B635345F9479B8FCE12 /* Pods-SDKInAppMessaging_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SDKInAppMessaging_Tests.modulemap"; sourceTree = "<group>"; };
 		C041FFCA563DA993E38B9A4FC806C1FD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -147,11 +145,9 @@
 		6CFEF47586DA4EEC89BF43879F6ACDCE /* SDKInAppMessaging */ = {
 			isa = PBXGroup;
 			children = (
-				B6C28DCF242FF0D90002133E /* Classes */,
 				7D956FC50C580B28521A0748DA93C0A1 /* ReplaceMe.swift */,
 				FACCF48C55DB70B6E5D1676C83691443 /* Pod */,
 				4CA24FBD3F010FC844D8E305925E7D42 /* Support Files */,
-				B6C28DD2242FF1030002133E /* TestManager.swift */,
 			);
 			name = SDKInAppMessaging;
 			path = ../..;
@@ -192,12 +188,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B6C28DCF242FF0D90002133E /* Classes */ = {
+		B6C28DD4242FF3780002133E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B6C28DD0242FF0F00002133E /* SharedManager.swift */,
+				B6C28DD5242FF39D0002133E /* PodManager.swift */,
 			);
-			path = Classes;
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -230,6 +226,7 @@
 		FACCF48C55DB70B6E5D1676C83691443 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
+				B6C28DD4242FF3780002133E /* Classes */,
 				C041FFCA563DA993E38B9A4FC806C1FD /* LICENSE */,
 				CF676DCB9160CB5746E4C431B532895A /* README.md */,
 				80F15516C0101C80567178F0FADC6616 /* SDKInAppMessaging.podspec */,
@@ -381,10 +378,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6C28DD1242FF0F00002133E /* SharedManager.swift in Sources */,
 				B19A3E3270F53886D610A28E5D3821FA /* ReplaceMe.swift in Sources */,
+				B6C28DD6242FF39D0002133E /* PodManager.swift in Sources */,
 				63363569C44C95CBF761CF289C43DA0D /* SDKInAppMessaging-dummy.m in Sources */,
-				B6C28DD3242FF1030002133E /* TestManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,38 +418,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		4113A0533F411200A6E050D68A6373E1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84A453A870690E6BF9AA7E99B0BEC711 /* SDKInAppMessaging.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SDKInAppMessaging/SDKInAppMessaging-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SDKInAppMessaging/SDKInAppMessaging-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SDKInAppMessaging/SDKInAppMessaging.modulemap";
-				PRODUCT_MODULE_NAME = SDKInAppMessaging;
-				PRODUCT_NAME = SDKInAppMessaging;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		74E43E25C6A0037F27E50BCC30EDDA0E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0AC3C23C72FFFF8EC02F9DB73546A1CF /* Pods-SDKInAppMessaging_Tests.debug.xcconfig */;
@@ -481,37 +445,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8664D3C92498CD95053B65E634AFD4D4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AF5EAF61B2819B9A233369E382DD1EC /* SDKInAppMessaging.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SDKInAppMessaging/SDKInAppMessaging-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SDKInAppMessaging/SDKInAppMessaging-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SDKInAppMessaging/SDKInAppMessaging.modulemap";
-				PRODUCT_MODULE_NAME = SDKInAppMessaging;
-				PRODUCT_NAME = SDKInAppMessaging;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -675,6 +608,69 @@
 			};
 			name = Debug;
 		};
+		C4B56C2550871E0A8015B4DB2F66C067 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AF5EAF61B2819B9A233369E382DD1EC /* SDKInAppMessaging.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SDKInAppMessaging/SDKInAppMessaging-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SDKInAppMessaging/SDKInAppMessaging-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SDKInAppMessaging/SDKInAppMessaging.modulemap";
+				PRODUCT_MODULE_NAME = SDKInAppMessaging;
+				PRODUCT_NAME = SDKInAppMessaging;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E439A97BAC694FEFE7DF225415653061 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84A453A870690E6BF9AA7E99B0BEC711 /* SDKInAppMessaging.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SDKInAppMessaging/SDKInAppMessaging-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SDKInAppMessaging/SDKInAppMessaging-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SDKInAppMessaging/SDKInAppMessaging.modulemap";
+				PRODUCT_MODULE_NAME = SDKInAppMessaging;
+				PRODUCT_NAME = SDKInAppMessaging;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		EF78CAF1AFAAACD4700DC059823775A4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BA577132FA7E899D0EFDE1D2D0220DF1 /* Pods-SDKInAppMessaging_Tests.release.xcconfig */;
@@ -757,8 +753,8 @@
 		748C06B1F218A5A9CF06022530D014C9 /* Build configuration list for PBXNativeTarget "SDKInAppMessaging" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8664D3C92498CD95053B65E634AFD4D4 /* Debug */,
-				4113A0533F411200A6E050D68A6373E1 /* Release */,
+				C4B56C2550871E0A8015B4DB2F66C067 /* Debug */,
+				E439A97BAC694FEFE7DF225415653061 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "summary": "A short description of SDKInAppMessaging.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/git/SDKInAppMessaging",
+  "homepage": "https://github.com/ArunMak/SDKInAppMessaging",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,12 @@
     "git": "arunmakk@gmail.com"
   },
   "source": {
-    "git": "https://github.com/git/SDKInAppMessaging.git",
+    "git": "https://github.com/ArunMak/SDKInAppMessaging.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "SDKInAppMessaging/Classes/**/*"
+  "source_files": "SDKInAppMessaging/Classes/**/*",
+  "public_header_files": "SDKInAppMessaging/Classes/**/*.h"
 }
